@@ -1,0 +1,22 @@
+.Todo {
+  transition: opacity 1s ease;
+  padding: 15px;
+}
+
+.Todo.fade-out {
+  opacity: 0;
+  animation: fadeOut 1s ease forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.Todo Button {
+  margin-left: 15px;
+}

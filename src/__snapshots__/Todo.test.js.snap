@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <ul
+    class="list-group"
+  >
+    <li
+      class="Todo list-group-item"
+      style="text-decoration: none;"
+    >
+      <div
+        class="btn-group"
+        role="group"
+      >
+        <button
+          class="btn btn-warning"
+          type="button"
+        >
+          Edit
+        </button>
+        <button
+          class="btn btn-danger"
+          type="button"
+        >
+          X
+        </button>
+        <button
+          class="btn btn-success"
+          type="button"
+        >
+          Mark as Completed
+        </button>
+      </div>
+    </li>
+  </ul>
+</DocumentFragment>
+`;
