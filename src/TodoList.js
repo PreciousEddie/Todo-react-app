@@ -5,20 +5,25 @@ import NewTodoForm from "./NewTodoForm";
 
 const TodoList = () => {
     const INITIAL_STATE = [];
-    const [todos, setTodos] = useState(INITIAL_STATE);
-    useEffect(() => {
-        const savedTodos = localStorage.getItem("todos");
-        if (savedTodos) {
-            try {
-                const parsedTodos = JSON.parse(savedTodos);
-                setTodos(parsedTodos);
-            } catch (error) {
-                setTodos(INITIAL_STATE);
-            }
-        } else {
-            setTodos(INITIAL_STATE);
-        }
-    }, []);
+    const [todos, setTodos] = useState(JSON.parse(localStorage.getItem("todos")) || INITIAL_STATE);
+    // useEffect(() => {
+    //     const todos = JSON.parse(localStorage.getItem("items"));
+    //     if (todos) {
+    //         setTodos(todos);
+    //     }
+    // }, [])
+    //     const savedTodos = localStorage.getItem("todos");
+    //     if (savedTodos) {
+    //         try {
+    //             const parsedTodos = JSON.parse(savedTodos);
+    //             setTodos(parsedTodos);
+    //         } catch (error) {
+    //             setTodos(INITIAL_STATE);
+    //         }
+    //     } else {
+    //         setTodos(INITIAL_STATE);
+    //     }
+    // }, []);
     useEffect(() => {
         localStorage.setItem("todos", JSON.stringify(todos));
     }, [todos]);
